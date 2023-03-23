@@ -8,7 +8,7 @@ spec:
   - host: "dashboardk8.com"
     http:
       paths:
-      - path: /
+      - path: /dashboard(/|$)(.*)
         pathType: Prefix
         backend:
           service:
