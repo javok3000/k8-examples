@@ -1,0 +1,13 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: myingress-ingress #Reference to a service
+  namespace: <namespace_name>
+spec:
+  rules:
+  - host: ingress.com #URL
+    http:
+      paths: # /path
+      - backend:
+          serviceName: ingress-service #Reference to a service
+          servicePort: 8080
